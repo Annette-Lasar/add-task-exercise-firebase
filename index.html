@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt</title>
+    <link rel="icon" href="./assets/img/icons/business_statistics.svg" />
+    <link rel="stylesheet" href="./css/reset_stylesheet.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Meine Internetseite</h1>
+    <div>
+      <form id="task_form" action="">
+        <label for="title">Title:</label>
+        <input
+          id="task_title"
+          name="title"
+          type="text"
+          placeholder="Titel hier einfügen"
+        />
+        <br />
+        <label for="categories">Choose a category:</label>
+        <br />
+        <select id="task_category" name="categories" id="cars">
+          <option value="">--Please choose an option--</option>
+          <option value="User Story">User Story</option>
+          <option value="Technical Task">Technical Task</option>
+        </select>
+        <br />
+        <label>
+          <input type="radio" name="priority" value="urgent" />
+          Urgent
+        </label>
+
+        <label>
+          <input type="radio" name="priority" value="medium" checked />
+          Medium
+        </label>
+
+        <label>
+          <input type="radio" name="priority" value="low" />
+          Low
+        </label>
+
+        <button type="button" onclick="createTask()">send</button>
+      </form>
+    </div>
+  </body>
+</html>

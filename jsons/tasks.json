@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "category": "User Story",
+    "title": "Pokemon List View & Search Bar",
+    "description": "Build the main page that fetches Pokemon from the PokeAPI and displays them as a scrollable list with a live search input.",
+    "dueDate": "09/15/2026",
+    "priority": "medium",
+    "assignedTo": [6, 7, 1],
+    "status": "toDo",
+    "position": 0,
+    "subtasks": [
+      { "text": "Fetch first 20 Pokemon from PokeAPI", "done": true },
+      { "text": "Render Pokemon cards in a grid", "done": false },
+      { "text": "Implement search input with filtering", "done": false }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Technical Task",
+    "title": "Pokemon Detail Overlay",
+    "description": "Create a detail overlay that opens on card click and shows stats, abilities, and types for the selected Pokemon.",
+    "dueDate": "09/18/2026",
+    "priority": "urgent",
+    "assignedTo": [2, 3],
+    "status": "toDo",
+    "position": 1,
+    "subtasks": [
+      { "text": "Design overlay layout", "done": true },
+      { "text": "Fetch detail data by Pokemon ID", "done": true },
+      { "text": "Display base stats as bar chart", "done": false }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "User Story",
+    "title": "Type & Stats Filter",
+    "description": "Add filter controls so users can narrow the Pokemon list down by type (e.g. fire, water, grass).",
+    "dueDate": "09/20/2026",
+    "priority": "medium",
+    "assignedTo": [4],
+    "status": "inProgress",
+    "position": 0,
+    "subtasks": [
+      { "text": "Create type filter dropdown", "done": false },
+      { "text": "Apply filter logic to rendered list", "done": false }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "User Story",
+    "title": "Favorites / Bookmark System",
+    "description": "Allow users to mark Pokemon as favorites and view a separate favorites list persisted in local storage.",
+    "dueDate": "09/22/2026",
+    "priority": "low",
+    "assignedTo": [5, 6],
+    "status": "toDo",
+    "position": 2,
+    "subtasks": [
+      { "text": "Add favorite toggle button on cards", "done": false },
+      { "text": "Persist favorites in localStorage", "done": false },
+      { "text": "Build favorites-only view", "done": false },
+      { "text": "Sync favorite state on page reload", "done": false }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "User Story",
+    "title": "Loading Spinner & Load-More Pagination",
+    "description": "Show a loading spinner during API calls and add a button to load the next batch of Pokemon.",
+    "dueDate": "09/25/2026",
+    "priority": "medium",
+    "assignedTo": [7, 8, 1],
+    "status": "inProgress",
+    "position": 1,
+    "subtasks": []
+  }
+]
