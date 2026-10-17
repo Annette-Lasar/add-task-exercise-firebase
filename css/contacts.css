@@ -1,0 +1,316 @@
+/*  ====================================================================================================
+    CONTACTS.CSS - CONTACTS PAGE - MOBILE VERSION (min-width: 320px)
+    ====================================================================================================
+    1. STANDARDS (HTML, body, titles)
+    2. MAIN - CONTACT LIST (Contact categories, contacts)
+    3. OTHER (Desktop responsive)
+    ==================================================================================================== */
+
+/*  ==================================================================================================== 
+    1. STANDARDS
+    ==================================================================================================== */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+header {
+  padding: 0.5em 0.75em;
+}
+
+/*  ==================================================================================================== 
+    2. MAIN - CONTACT LIST
+    ==================================================================================================== */
+
+.main-container {
+  background-color: var(--color-white);
+  min-width: 0;
+  padding: 0.5em 0.75em;
+}
+
+.main-container.details-open {
+  background-color: transparent;
+  padding-top: 0;
+}
+
+#contact-list {
+  padding-top: 1.5em;
+  padding-bottom: 10em;
+}
+
+.letter-container {
+  height: 58px;
+  padding: 0.7em 1.5em;
+  margin: 0;
+}
+
+.letter-line {
+  border: none;
+  border-top: 1px solid var(--color-gray-209);
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.contact-card {
+  display: flex;
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease,
+    border-radius 0.1s ease;
+  cursor: pointer;
+  gap: 2.1875em;
+  width: 100%;
+  padding: 0.9375em 1.5em;
+}
+
+.contact-card.active {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 10px;
+}
+
+.contact-card:not(.active):hover {
+  background-color: rgb(240 240 240 / 100%);
+  border-radius: 10px;
+}
+
+.contact-card:not(.active):active {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 10px;
+}
+
+.contact-shortcut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color, rgb(77 77 255 / 100%));
+  border: 2px solid var(--color-white);
+  border-radius: 45px;
+  color: var(--color-white);
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.contact-data-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.3em;
+  min-width: 0;
+}
+
+.contact-name {
+  color: var(--color-black);
+  font-size: 1.25rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.contact-name:active {
+  color: var(--color-white);
+}
+
+.contact-e-mail {
+  color: var(--color-email);
+  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.contact-menu {
+  object-fit: contain;
+  box-shadow: 0 4px 4px var(--color-black-25);
+  position: fixed;
+  right: 10px;
+  bottom: 96px;
+  z-index: 50;
+  border: 1px solid var(--color-dark);
+  border-radius: 46px;
+  padding: 1.3em;
+  width: 32px;
+  height: 32px;
+}
+
+.contact-menu:hover {
+  background-color: var(--color-highlight);
+  border: 1px solid var(--color-highlight);
+}
+
+.contact-menu:active {
+  background-color: var(--color-name);
+  border: 1px solid var(--color-name);
+}
+
+.contact-menu img {
+  object-fit: cover;
+  max-width: none;
+}
+
+.contact-menu-text {
+  display: none;
+}
+
+/* ##### Logged-in user ##### */
+
+.shortcut-wrapper {
+  position: relative;
+}
+
+.own-account-badge-on-shortcut {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-email);
+  color: var(--color-white);
+  border-radius: 4px;
+  font-size: 0.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.25em 0.5em;
+  margin-top: 0.25em;
+  box-shadow: 0 2px 4px var(--color-black-10);
+}
+
+/*  ==================================================================================================== 
+    3. OTHER
+    ==================================================================================================== */
+
+.show {
+  display: flex;
+}
+
+@media (width <= 64em) {
+  .hidden {
+    display: none;
+  }
+}
+
+@media (width >= 64em) {
+  #page {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .main-container {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    min-height: 0;
+    padding-inline: 0;
+    padding-bottom: 0;
+  }
+
+  .main-container,
+  .main-container.details-open {
+    background-color: var(--color-white);
+  }
+
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    position: relative;
+    z-index: 10;
+    box-shadow: 4px 0 6px var(--color-black-10);
+    gap: 1em;
+    height: 100%;
+    max-width: 430px;
+  }
+
+  .contact-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    border-radius: 10px;
+    box-shadow: none;
+    gap: 1em;
+    width: 350px;
+    max-width: 350px;
+    height: 50px;
+    padding: 0.75em 1em;
+  }
+
+  .button-wrapper #add-contact-menu-button {
+    display: flex;
+  }
+
+  .contact-menu-text {
+    display: inline;
+    color: var(--color-white);
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+
+  #contact-list {
+    display: block;
+    overflow: visible;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 1.5em;
+    padding-inline: 1.5em;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2em;
+  }
+}

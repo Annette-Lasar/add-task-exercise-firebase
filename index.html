@@ -3,50 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekt</title>
-    <link rel="icon" href="./assets/img/icons/business_statistics.svg" />
+    <title>Join</title>
+    <link rel="icon" href="./assets/img/icons/join-logo.svg" />
     <link rel="stylesheet" href="./css/reset_stylesheet.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <h1>Meine Internetseite</h1>
+    <header>
+      <h1>Join</h1>
+    </header>
+    <main>Welcome to the kanban app of Join!</main>
     <div>
-      <form id="task_form" action="">
-        <label for="title">Title:</label>
-        <input
-          id="task_title"
-          name="title"
-          type="text"
-          placeholder="Titel hier einfügen"
+      <nav class="main-nav">
+        <img
+          class="nav-join-img"
+          src="../assets/img/icons/join-logo-white.svg"
+          alt=""
         />
-        <br />
-        <label for="categories">Choose a category:</label>
-        <br />
-        <select id="task_category" name="categories" id="cars">
-          <option value="">--Please choose an option--</option>
-          <option value="User Story">User Story</option>
-          <option value="Technical Task">Technical Task</option>
-        </select>
-        <br />
-        <label>
-          <input type="radio" name="priority" value="urgent" />
-          Urgent
-        </label>
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="#">
+              <img src="../assets/img/icons/summary-icon.svg" alt="" />
+              <span>Home</span>
+            </a>
+          </li>
 
-        <label>
-          <input type="radio" name="priority" value="medium" checked />
-          Medium
-        </label>
+          <li class="main-nav-item">
+            <a href="../html/add-task.html" aria-current="page">
+              <img src="../assets/img/icons/addtask-icon.svg" alt="" />
+              <span> Add Task </span>
+            </a>
+          </li>
 
-        <label>
-          <input type="radio" name="priority" value="low" />
-          Low
-        </label>
+          <li class="main-nav-item">
+            <a href="#">
+              <img src="../assets/img/icons/board-icon.svg" alt="" />
+              <span> No access </span>
+            </a>
+          </li>
 
-        <button type="button" onclick="createTask()">send</button>
-      </form>
+          <li class="main-nav-item">
+            <a href="../html/contacts.html">
+              <img src="../assets/img/icons/contact-icon.svg" alt="" />
+              <span> Contacts </span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="main-nav-legal">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#">Legal Notice</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>

@@ -1,3 +1,5 @@
+const url =
+  "https://crud-practice-d9604-default-rtdb.europe-west1.firebasedatabase.app/";
 let tasks = [];
 
 async function init() {
@@ -5,10 +7,9 @@ async function init() {
 }
 
 async function fetchTasks() {
-  const response = await fetch("../jsons/tasks.json");
-  data = await response.json();
+  const response = await fetch(url + "json");
+  const data = await response.json();
   tasks = data;
-  //   console.log(tasks);
 }
 
 function createTask() {
@@ -21,23 +22,7 @@ function createTask() {
 
   const newTask = Object.fromEntries(formData);
 
-  //   const title = document.getElementById("task_title").value;
-  //   const category = document.getElementById("task_category").value;
-  //   console.log(title);
-
-  //   const newTask = {
-  //     category: document.getElementById("task_category").value,
-  //     title: title,
-  //     description: "",
-  //     dueDate: "",
-  //     priority: "medium",
-  //     assignedTo: [],
-  //     status: "toDo",
-  //     position: 0,
-  //     subtasks: [],
-  //   };
-
   console.log(newTask);
 }
 
-init();
+// init();
