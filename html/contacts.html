@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join - Contacts</title>
-    <!-- Favicon -->
     <link
       rel="icon"
       type="image/svg+xml"
@@ -16,18 +15,38 @@
     <link rel="stylesheet" href="../css/contacts.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
-    <!-- <script src="../js/script.js" defer></script> -->
-    <script src="../js/contacts.js" defer></script>
+    <script type="module" src="../js/contacts.js" defer></script>
   </head>
   <body class="main-page" id="page">
     <header class="add-task-header">
       <h1>Contacts</h1>
       <div class="add-contact">
         <p>Add a new contact</p>
+        <form id="contact_form">
+          <div class="form-wrapper">
+            <div class="input-wrapper">
+              <label for="name">Name<span>:</span></label>
+              <input name="name" type="text" />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="email">E-mail<span>:</span></label>
+              <input name="email" type="text" />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="phone">Phone<span>:</span></label>
+              <input name="phone" type="text" />
+            </div>
+          </div>
+          <button class="add-contact-btn" type="submit" onclick="createContact()">Create contact</button>
+        </form>
       </div>
     </header>
     <main class="main-container main" id="main-view">
-      <div class="contacts-list">Contacts</div>
+      <ul id="contacts_list" class="contacts-list">
+        Contacts
+      </ul>
     </main>
 
     <nav class="main-nav">

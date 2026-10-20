@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/add-task.css" />
     <link rel="stylesheet" href="../css/style.css" />
+
     <script type="module" src="../js/add-task.js"></script>
   </head>
   <body>
@@ -151,16 +152,10 @@
 
             <div class="form-field form-field--assigned">
               <label for="assigned-to">Assigned to</label>
-              <select
-                class="form-control form-control--select"
-                id="assigned-to"
-                name="assignedTo"
-              >
-                <option class="select-placeholder" value="" disabled selected>
-                  Select contacts to assign
-                </option>
-                <!-- Optionen kommen später mit JS -->
-              </select>
+              <input type="text">
+              <ul id="contact_list">
+
+              </ul>
             </div>
 
             <div class="form-field form-field--category">

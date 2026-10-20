@@ -50,4 +50,25 @@
   /* uses color-label: board-task category tag */
   --color-label-user-story: rgba(0 56 255 / 100%);
   --color-label-technical-task: rgba(31 215 193 / 100%);
+
+  /* uses color-label: contacts */
+  --color-label-contact-darkorange: #FF7A00; 
+  --color-label-contact-rose: #FF5EB3; 
+  --color-label-contact-violet: #6E52FF; 
+  --color-label-contact-lilac: #9327FF; 
+  --color-label-contact-turquoise: #00BEE8; 
+  --color-label-contact-emerald: #1FD7C1; 
+  --color-label-contact-mediumorange: #FF745E; 
+  --color-label-contact-apricot: #FFA35E; 
+  --color-label-contact-pink: #FC71FF; 
+  --color-label-contact-darkyellow: #FFC701; 
+  --color-label-contact-darkblue: #0038FF; 
+  --color-label-contact-lightgreen: #C3FF2B; 
+  --color-label-contact-yellow: #FFE62B; 
+  --color-label-contact-red: #FF4646; 
+  --color-label-contact-lightorange: #FFBB2B; 
+
+
+
+
 }
