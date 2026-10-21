@@ -152,10 +152,24 @@
 
             <div class="form-field form-field--assigned">
               <label for="assigned-to">Assigned to</label>
-              <input type="text">
-              <ul id="contact_list">
 
-              </ul>
+              <div class="contact-dropdown">
+                <div class="contact-search">
+                  <input
+                    id="assigned-to"
+                    type="text"
+                    autocomplete="off"
+                    aria-controls="contact_list"
+                    aria-expanded="false"
+                  />
+                  <img
+                    src="../assets/img/icons/drop-arrow.svg"
+                    alt=""
+                    class="dropdown-arrow"
+                  />
+                </div>
+                <ul id="contact_list" class="contact-list" hidden></ul>
+              </div>
             </div>
 
             <div class="form-field form-field--category">

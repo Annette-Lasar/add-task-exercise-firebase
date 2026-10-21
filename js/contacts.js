@@ -21,18 +21,24 @@ function renderContacts() {
   }
 }
 
-async function createContact() {
+async function createContact(event) {
+  event.preventDefault();
   const form = document.querySelector("#contact_form");
   const formData = new FormData(form);
 
   const newContact = Object.fromEntries(formData);
 
-  newContact.shortcut = getInitials(newContact.name); 
-  newContact.shortcutColor = getRandomContactColor(); 
-
-  console.log(newContact);
+  newContact.shortcut = getInitials(newContact.name);
+  newContact.shortcutColor = getRandomContactColor();
 
   await sendData("contacts", newContact);
+
+  allContacts = Object.values(await getData("contacts"));
+  console.log("Kontakte nach dem Laden:", allContacts);
+
+  renderContacts();
+  console.log("Kontaktliste neu gerendert");
+  form.reset();
 }
 
 /* Funktionen in JS-Modulen sind nicht automatisch global verfügbar.
